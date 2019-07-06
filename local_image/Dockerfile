@@ -8,9 +8,10 @@ LABEL Description="Dockerized my dummy-api as an example of how to create an ima
 COPY ./dummy-api/ /dummy-api/
 
 # Installs Python3
-RUN apk --update --no-cache add python3 python3-dev py3-pip
+RUN apk --update --no-cache add python3 py3-pip
 
 # Updates PIP just so we don't get those pesky warning messages...
+# Uncomment the line bellow if you want to upgrade PIP...
 #RUN pip3 install --upgrade pip
 
 # Installs required stuffs...
